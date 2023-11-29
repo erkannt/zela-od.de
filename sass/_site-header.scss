@@ -28,3 +28,12 @@
     row-gap: var(--space-2xs);
   }
 }
+
+.site-header__home_link {
+  display: flex;
+
+  img {
+    margin-top: calc(-1 * var(--step-4) / 4);
+    height: var(--step-4);
+  }
+}
