@@ -1,7 +1,7 @@
 body {
-  padding: var(--space-2xl) var(--space-s);
+  padding: 0 var(--space-s) var(--space-2xl);
   margin: 0 auto;
-  max-width: 100ch;
+  max-width: 55rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
