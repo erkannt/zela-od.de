@@ -5,11 +5,19 @@
   margin-bottom: var(--space-xl);
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+
   a {
     font-weight: bolder;
     color: var(--off-white);
     text-decoration: none;
   }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: var(--space-2xs);
+  }
+
   nav {
     margin: 0 auto;
     max-width: 60rem;
@@ -19,6 +27,7 @@
     column-gap: var(--space-l);
     row-gap: var(--space-m);
   }
+
   ul {
     list-style: none;
     padding: 0;
