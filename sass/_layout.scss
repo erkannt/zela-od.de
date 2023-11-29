@@ -10,3 +10,9 @@ body {
     flex-grow: 1;
   }
 }
+
+footer {
+  border-top: 3px solid var(--red);
+  padding-top: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
