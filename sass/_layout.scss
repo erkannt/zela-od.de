@@ -1,0 +1,12 @@
+body {
+  padding: var(--space-2xl) var(--space-s);
+  margin: 0 auto;
+  max-width: 100ch;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+  }
+}
