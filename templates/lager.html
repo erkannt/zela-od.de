@@ -2,7 +2,7 @@
 <h1>{{ section.title }}</h1>
 
 <ul>
-  {% for page in section.pages %}
+  {% for page in section.pages | reverse %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
