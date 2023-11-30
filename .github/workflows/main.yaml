@@ -10,8 +10,8 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
-        with:
-          branch: gh-pages
-          folder: .
+      - name: build_and_deploy 🚀
+        uses: shalzz/zola-deploy-action@v0.16.1-1
+        env:
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
