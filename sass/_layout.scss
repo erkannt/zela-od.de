@@ -11,6 +11,10 @@ body {
   }
 }
 
+section {
+  margin-bottom: var(--space-2xl);
+}
+
 footer {
   border-top: 3px solid var(--red);
   padding-top: var(--space-xl);
