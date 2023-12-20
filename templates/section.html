@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <h1>{{ section.title }}</h1>
 
-<ul>
+<ul class="section-listing">
   {% for page in section.pages | reverse %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %}
