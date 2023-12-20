@@ -15,6 +15,17 @@ section {
   margin-bottom: var(--space-2xl);
 }
 
+img {
+  margin-bottom: var(--space-m);
+}
+
+figure {
+  margin-bottom: var(--space-m);
+  img {
+    margin-bottom: var(--space-xs);
+  }
+}
+
 footer {
   border-top: 3px solid var(--red);
   padding-top: var(--space-xl);
