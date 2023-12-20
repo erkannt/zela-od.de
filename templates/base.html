@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zeltlager St. Vicelin Bad Oldesloe</title>
-    <link rel="stylesheet" href="{{ config.base_url }}/style.css" />
-  </head>
 
-  <body>
-    <header class="site-header">
-      <nav>
-	      <a class="site-header__home_link" href="/"><image src="{{ config.base_url}}/daumen--solid.svg"><span> ZeLa St. Vicelin</span></a>
-        <ul>
-          <li><a href="/pages/was-ist-zela">Was ist ZeLa</a></li>
-          <li><a href="/pages/lager-regeln">Lagerregeln</a></li>
-          <li><a href="/lager">Alle Lager</a></li>
-          <li><a href="https://freunde.zela-od.de">Zeltlagerfreunde</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zeltlager St. Vicelin Bad Oldesloe</title>
+  <link rel="stylesheet" href="{{ config.base_url }}/style.css" />
 
-    <main>{% block content %} {% endblock %}</main>
-    <footer>
-      <p>
-        Kontakte über das Pfarrbüro der Gemeinde St. Vicelin Bad Oldesloe <br>
-        Vicelinstraße 1, 23843 Bad Oldesloe <br>
-        oder per Mail an
-        <a href="mailto:lagerleiter@zela-od.de">lagerleiter@zela-od.de</a> oder
-        <a href="mailto:info@zela-od.de">info@zela-od.de</a>.
-      </p>
-      <a href="/pages/impressum">Impressum & Datenschutzerklärung</a>
-    </footer>
-  </body>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav>
+      <a class="site-header__home_link" href="/">
+        <image src="{{ config.base_url}}/daumen--solid.svg"><span> ZeLa St. Vicelin</span>
+      </a>
+      <ul>
+        <li><a href="/pages/was-ist-zela">Was ist ZeLa</a></li>
+        <li><a href="/pages/lager-regeln">Lagerregeln</a></li>
+        <li><a href="/lager">Alle Lager</a></li>
+        <li><a href="https://freunde.zela-od.de">Zeltlagerfreunde</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>{% block content %} {% endblock %}</main>
+  <footer>
+    <p>
+      Kontakte über das Pfarrbüro der Gemeinde St. Vicelin Bad Oldesloe <br>
+      Vicelinstraße 1, 23843 Bad Oldesloe <br>
+      oder per Mail an
+      <a href="mailto:lagerleiter@zela-od.de">lagerleiter@zela-od.de</a> oder
+      <a href="mailto:info@zela-od.de">info@zela-od.de</a>.
+    </p>
+    <a href="/pages/impressum">Impressum & Datenschutzerklärung</a>
+  </footer>
+</body>
+
 </html>
