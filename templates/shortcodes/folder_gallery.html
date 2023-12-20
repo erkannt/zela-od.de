@@ -1,9 +1,14 @@
 <div class="gallery">
   {% for asset in page.assets | sort -%} {%- if asset is
   matching("[.](jpg|png|JPG)$") and asset is containing(folder) -%} {% set image
-  = resize_image(path=asset, width=300, height=300, op='fill') %}
+  = resize_image(path=asset, width=300, height=300, op='fill') %} {% set webp =
+  resize_image(path=asset, width=300, height=300, op="fill", format="webp",
+  quality=75) %}
   <a href="{{ get_url(path=asset) }}" target="_blank">
-    <img src="{{ image.url }}" />
+    <picture>
+      <source srcset="{{ webp.url }}" type="image/webp" />
+      <img loading="lazy" src="{{ image.url }}" />
+    </picture>
   </a>
   {%- endif %} {%- endfor %}
 </div>
