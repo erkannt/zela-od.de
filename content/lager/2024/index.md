@@ -1,9 +1,9 @@
 +++
 title = "Zela 2024 - Sattelt die Pferde, schnappt euch den Hut, der Wilde Westen ruft"
 datum = "22.07.2024 - 03.08.2024"
-motto = Wilder Westen
-comment = Sattelt die Pferde, schnappt euch den Hut, der Wilde Westen ruft
-place = 
+motto = "Wilder Westen"
+comment = "Sattelt die Pferde, schnappt euch den Hut, der Wilde Westen ruft"
+place = "Westerlohmühlen"
 +++
 
 ![](cover2024.png)
