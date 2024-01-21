@@ -5,9 +5,9 @@
   {% for page in section.pages | reverse %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   <ul>
-    <li>page.place</li> 
-    <li>page.motto</li> 
-    <li>page.comment</li>
+    <li>{{page.place}}</li> 
+    <li>{{page.motto}}</li> 
+    <li>{{page.comment}}</li>
   </ul>
   {% endfor %}
 </ul>

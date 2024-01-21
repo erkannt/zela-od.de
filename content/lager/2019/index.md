@@ -6,4 +6,5 @@ comment = "In der Welt von Harry Potter erlebten wir zwei magische Wochen."
 place = "Haselünne Hamm"
 +++
 
+In der Welt von Harry Potter erlebten wir zwei magische Wochen.
 {{ folder_gallery(folder="gallery") }}
