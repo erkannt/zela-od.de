@@ -3,12 +3,13 @@
 
 <ul class="section-listing">
   {% for page in section.pages | reverse %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  <ul>
-    <li>page.place</li> 
-    <li>page.motto</li> 
-    <li>page.comment</li>
-  </ul>
+  <li>
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    <p>
+      {{page.extra.motto}} — {{page.extra.place}}<br />
+      {{page.extra.comment}}
+    </p>
+  </li>
   {% endfor %}
 </ul>
 {% endblock content %}

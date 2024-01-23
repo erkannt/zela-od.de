@@ -1,5 +1,6 @@
 +++
 title = "Zela 2024 - Sattelt die Pferde, schnappt euch den Hut, der Wilde Westen ruft"
+[extra]
 datum = "22.07.2024 - 03.08.2024"
 motto = "Wilder Westen"
 comment = "Sattelt die Pferde, schnappt euch den Hut, der Wilde Westen ruft"
