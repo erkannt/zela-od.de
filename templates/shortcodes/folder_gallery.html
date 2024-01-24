@@ -4,11 +4,36 @@
   = resize_image(path=asset, width=300, height=300, op='fill') %} {% set webp =
   resize_image(path=asset, width=300, height=300, op="fill", format="webp",
   quality=75) %}
-  <a href="{{ get_url(path=asset) }}" target="_blank">
+  <a
+    class="gallery__thumbnail_link"
+    href="#{{ folder }}-lightbox-{{ loop.index }}"
+    id="{{ folder }}-thumbnail-{{ loop.index }}"
+  >
     <picture>
       <source srcset="{{ webp.url }}" type="image/webp" />
       <img loading="lazy" src="{{ image.url }}" />
     </picture>
   </a>
+  <div
+    role="dialog"
+    class="gallery-modal"
+    id="{{ folder }}-lightbox-{{ loop.index }}"
+  >
+    <a
+      href="#{{ folder }}-thumbnail-{{ loop.index }}"
+      class="gallery-modal__overlay"
+      tabindex="-1"
+    ></a>
+    <div class="gallery-modal__content">
+      <a
+        title="Close lightbox"
+        aria-label="Close lightbox"
+        href="#{{ folder }}-thumbnail-{{ loop.index }}"
+        class="gallery-modal__close"
+        >&times;
+      </a>
+      <img loading="lazy" src="{{ asset }}" />
+    </div>
+  </div>
   {%- endif %} {%- endfor %}
 </div>

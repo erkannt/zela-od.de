@@ -2,8 +2,57 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-s);
+}
 
-  a {
-    width: 30%;
+.gallery__thumbnail_link {
+  width: 30%;
+}
+
+.gallery-modal {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+}
+
+.gallery-modal:not(:target) {
+  display: none;
+}
+
+.gallery-modal__overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+
+.gallery-modal__content {
+  transition: transform 1s;
+  background: #fff;
+  position: relative;
+  margin: auto;
+  padding: var(--space-m);
+  border-radius: 4px;
+  max-height: 80vh;
+  max-width: 80vw;
+
+  img {
+    height: 70vh;
+    width: 70vw;
+    object-fit: contain;
+    margin: 0;
   }
+}
+
+.gallery-modal__close {
+  font-size: 36px;
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  right: 6px;
+  top: -10px;
 }
