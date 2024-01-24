@@ -32,7 +32,27 @@
         class="gallery-modal__close"
         >&times;
       </a>
-      <img loading="lazy" src="{{ asset }}" />
+      {% if not loop.first %}
+      <a
+        title="Previous image"
+        aria-label="Previous image"
+        href="#{{ folder }}-lightbox-{{ loop.index - 1}}"
+        class="gallery-modal__nav"
+        >《</a
+      >
+      {% endif %}
+      <picture>
+        <img loading="lazy" src="{{ asset }}" />
+      </picture>
+      {% if not loop.last %}
+      <a
+        title="Next image"
+        aria-label="Next image"
+        href="#{{ folder }}-lightbox-{{ loop.index + 1}}"
+        class="gallery-modal__nav"
+        >》
+      </a>
+      {% endif %}
     </div>
   </div>
   {%- endif %} {%- endfor %}
