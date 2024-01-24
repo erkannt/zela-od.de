@@ -13,7 +13,7 @@ jobs:
           lfs: true
 
       - name: build_and_deploy 🚀
-        uses: shalzz/zola-deploy-action@v0.17.2
+        uses: shalzz/zola-deploy-action@v0.18.0
         env:
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
