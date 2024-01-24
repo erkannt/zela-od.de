@@ -7,6 +7,11 @@
 .gallery__thumbnail_link {
   width: 30%;
 }
+.gallery__thumbnail_link:target {
+  img {
+    border: 2px solid var(--red);
+  }
+}
 
 .gallery-modal {
   position: fixed;
