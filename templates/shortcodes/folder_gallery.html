@@ -1,17 +1,20 @@
 <div class="gallery">
   {% for asset in page.assets | sort -%} {%- if asset is
-  matching("[.](jpg|png|JPG)$") and asset is containing(folder) -%} {% set image
-  = resize_image(path=asset, width=300, height=300, op='fill') %} {% set webp =
-  resize_image(path=asset, width=300, height=300, op="fill", format="webp",
-  quality=75) %}
+  matching("[.](jpg|png|JPG)$") and asset is containing(folder) -%} {% set
+  thumbnail = resize_image(path=asset, width=300, height=300, op='fill') %} {%
+  set thumbnail_webp = resize_image(path=asset, width=300, height=300,
+  op="fill", format="webp", quality=75) %} {% set medium =
+  resize_image(path=asset, width=1600, height=800, op='fit') %} {% set
+  medium_webp = resize_image(path=asset, width=1600, height=800, op="fit",
+  format="webp", quality=75) %}
   <a
     class="gallery__thumbnail_link"
     href="#{{ folder }}-lightbox-{{ loop.index }}"
     id="{{ folder }}-thumbnail-{{ loop.index }}"
   >
     <picture>
-      <source srcset="{{ webp.url }}" type="image/webp" />
-      <img loading="lazy" src="{{ image.url }}" />
+      <source srcset="{{ thumbnail_webp.url }}" type="image/webp" />
+      <img loading="lazy" src="{{ thumbnail.url }}" />
     </picture>
   </a>
   <div
@@ -42,7 +45,8 @@
       >
       {% endif %}
       <picture>
-        <img loading="lazy" src="{{ asset }}" />
+        <source srcset="{{ medium_webp.url }}" type="image/webp" />
+        <img loading="lazy" src="{{ medium.url }}" />
       </picture>
       {% if not loop.last %}
       <a
