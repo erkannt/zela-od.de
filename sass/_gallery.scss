@@ -37,7 +37,7 @@
 
 .gallery-modal__content {
   transition: transform 1s;
-  background: #fff;
+  background: var(--off-white);
   position: relative;
   margin: auto;
   padding: var(--space-m);
@@ -56,6 +56,7 @@
 
 .gallery-modal__close {
   font-size: 36px;
+  color: var(--black);
   text-decoration: none;
   position: absolute;
   right: 6px;
